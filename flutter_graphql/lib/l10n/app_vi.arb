@@ -1,0 +1,26 @@
+{
+    "helloWorld": "Xin chào!",
+    "@helloWorld": {
+      "description": "Xin chào thế giới"
+    },
+    "viewAll": "Xem tất cả",
+    "ok": "Đồng ý",
+    "cancel": "Hủy",
+    "logout": "Đăng xuất",
+    "logoutAreYouSure": "Bạn có chắc muốn đăng xuất?",
+    "logoutFailed": "Đăng xuất thất bại",
+    "signIn": "Đăng nhập",
+    "signInWithEmailPassword": "Đăng nhập dùng email và mật khẩu",
+    "goAnonymous": "Đăng nhập ẩn danh",
+    "signInFailed": "Đăng nhập thất bại",
+    "signUp": "Đăng kí",
+    "homePage": "Trang chủ",
+    "posts": "Bài viết",
+    "shipments": "Ship",
+    "contacts": "Liên hệ",
+    "chats": "Trò chuyện",
+    "account": "Tải khoản",
+    "accountPage": "Trang tài khoản",
+    "rateAndFeedBacks": "Xếp hạng & nhận xét"
+
+}

@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "17.7.2"
+  },
+  "dependencies": {
+    "node": "^17.7.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "graphile-utils": "^4.12.2",
+    "knex": "^1.0.5",
+    "knex-migrate": "^1.7.4",
+    "pg": "^8.7.3",
+    "postgraphile": "^4.12.9",
+    "@graphile/pg-pubsub": "^4.12.2",
+    "@graphile-contrib/pg-simplify-inflector": "^6.1.0",
+    "express-jwt": "^6.1.1",
+    "jwks-rsa": "^2.0.5",
+    "node-fetch": "^2.6.7",
+    "nodemailer": "^6.7.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

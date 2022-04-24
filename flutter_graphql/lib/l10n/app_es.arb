@@ -1,0 +1,26 @@
+{
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    },
+    "viewAll": "View all",
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "logout": "Log out",
+    "logoutAreYouSure": "Are you sure that you want to logout?",
+    "logoutFailed": "Logout failed",
+    "signIn": "Sign in",
+    "signInWithEmailPassword": "Sign in with email and password",
+    "goAnonymous": "Go anonymous",
+    "signInFailed": "Sign in failed",
+    "signUp": "Sign up",
+    "homePage": "Home Page",
+    "posts": "Posts",
+    "shipments": "Shipments",
+    "contacts": "Contacts",
+    "chats": "Chats",
+    "account": "Account",
+    "accountPage": "Account Page",
+    "rateAndFeedBacks": "Rankings and feedbacks"
+
+}
