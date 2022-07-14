@@ -1,0 +1,69 @@
+flutter create --org com.dokuro dokuro_flutter
+flutter pub add http
+flutter pub add flutter_appauth
+flutter pub add get
+flutter pub add get_storage
+
+android/app/src/build.gradle // link dynamic nên bỏ _
+// AUTH0_REDIRECT_URI = 'com.dokuro.dokuroflutter://login-callback';
+        versionName flutterVersionName
+        manifestPlaceholders += [
+                'appAuthRedirectScheme': 'com.dokuro.dokuroflutter'
+        ]
+
+android/app/src/main/AndroidManifest.xml
+// bớt lỗi networkSecurityConfig
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+// in app intent
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!--0-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.APP_BROWSER" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <!--0-->
+
+android/app/src/main/res/xml/network_security_config.xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
+
+
+https://dokuro-postgraphile/api
+
+// notification
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dokuro.dokuro_flutter">
+    <!--1-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--1-->
+
+    </activity>
+    <!--3-->
+    <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
+    <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+        </intent-filter>
+    </receiver>
+    <!--3-->
+
+res/raw
+res/draw
